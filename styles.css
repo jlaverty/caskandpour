@@ -61,6 +61,7 @@ body {
     letter-spacing: 4px;
     position: relative;
     z-index: 1;
+    color: white;
 }
 
 .hero-subtitle {
@@ -69,6 +70,7 @@ body {
     margin-bottom: 30px;
     position: relative;
     z-index: 1;
+    color: white;
 }
 
 .hero-divider {
@@ -78,6 +80,54 @@ body {
     margin: 0 auto;
     position: relative;
     z-index: 1;
+}
+
+/* Floating Heart */
+.floating-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-20px); }
+}
+
+.heart {
+    position: relative;
+    width: 250px;
+    height: 225px;
+    animation: spin 10s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    left: 125px;
+    top: 0;
+    width: 125px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 62.5px 62.5px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    box-shadow: 0 0 20px rgba(196, 30, 58, 0.3);
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
 }
 
 /* Section Styles */
@@ -121,7 +171,14 @@ section {
     border-radius: 10px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.info-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .info-card:hover {
@@ -170,6 +227,14 @@ section {
     padding: 30px;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.feature.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .feature h3 {
@@ -203,6 +268,14 @@ section {
 
 .contact-item {
     text-align: center;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.contact-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact-item h3 {
@@ -228,6 +301,10 @@ section {
 
 .social-link {
     margin: 0 5px;
+}
+
+.social-link:hover {
+    text-decoration: underline;
 }
 
 .contact-form-section {
