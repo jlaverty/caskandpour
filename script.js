@@ -48,6 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Console message for developers
-    console.log('%cCask & Pour Event Website', 'font-size: 20px; font-weight: bold; color: #8b4513;');
+    console.log('%cHearts & Costumes Event Website', 'font-size: 20px; font-weight: bold; color: #c41e3a;');
     console.log('%cBuilt for Cloudflare Pages deployment', 'font-size: 12px; color: #666;');
 });
