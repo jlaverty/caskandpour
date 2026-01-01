@@ -99,8 +99,8 @@ body {
 
 .heart {
     position: relative;
-    width: 500px;
-    height: 450px;
+    width: 250px;
+    height: 225px;
     animation: spin 10s linear infinite;
 }
 
@@ -108,15 +108,15 @@ body {
 .heart::after {
     content: "";
     position: absolute;
-    left: 250px;
+    left: 125px;
     top: 0;
-    width: 250px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 125px 125px 0 0;
+    width: 125px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 62.5px 62.5px 0 0;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
-    box-shadow: 0 0 20px rgba(196, 30, 58, 0.5);
+    box-shadow: 0 0 20px rgba(196, 30, 58, 0.3);
 }
 
 .heart::after {
@@ -171,7 +171,14 @@ section {
     border-radius: 10px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.info-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .info-card:hover {
@@ -220,6 +227,14 @@ section {
     padding: 30px;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.feature.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .feature h3 {
@@ -253,6 +268,14 @@ section {
 
 .contact-item {
     text-align: center;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.contact-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact-item h3 {
@@ -278,6 +301,10 @@ section {
 
 .social-link {
     margin: 0 5px;
+}
+
+.social-link:hover {
+    text-decoration: underline;
 }
 
 .contact-form-section {

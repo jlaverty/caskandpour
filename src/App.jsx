@@ -1,23 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles.css";
 
 function App() {
-  useEffect(() => {
-    // Add smooth scrolling for any internal links (if added in the future)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
+  const elementsRef = useRef([]);
 
-    // Add fade-in animation on scroll for elements
+  useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -26,34 +13,23 @@ function App() {
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          entry.target.classList.add('animate-in');
         }
       });
     }, observerOptions);
 
-    // Observe all cards and features
-    document.querySelectorAll('.info-card, .feature, .contact-item').forEach(element => {
-      element.style.opacity = '0';
-      element.style.transform = 'translateY(20px)';
-      element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    elementsRef.current.forEach(element => {
       observer.observe(element);
     });
 
-    // Add hover effect for social links
-    document.querySelectorAll('.social-link').forEach(link => {
-      link.addEventListener('mouseenter', function() {
-        this.style.textDecoration = 'underline';
-      });
-      link.addEventListener('mouseleave', function() {
-        this.style.textDecoration = 'none';
-      });
-    });
-
-    // Console message for developers
-    console.log('%cHearts & Costumes Event Website', 'font-size: 20px; font-weight: bold; color: #c41e3a;');
-    console.log('%cBuilt for Cloudflare Pages deployment', 'font-size: 12px; color: #666;');
+    return () => observer.disconnect();
   }, []);
+
+  const addToRefs = (el) => {
+    if (el && !elementsRef.current.includes(el)) {
+      elementsRef.current.push(el);
+    }
+  };
 
   return (
     <>
@@ -73,22 +49,22 @@ function App() {
           <div className="container">
             <h2 className="section-title">Event Details</h2>
             <div className="info-grid">
-              <div className="info-card">
+              <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Date">📅</div>
                 <h3>Date</h3>
                 <p>Saturday, February 14th, 2026</p>
               </div>
-              <div className="info-card">
+              <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Time">🕐</div>
                 <h3>Time</h3>
                 <p>7:00 PM - 12:00 AM</p>
               </div>
-              <div className="info-card">
+              <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Location">📍</div>
                 <h3>Location</h3>
                 <p><a href="https://thunderthighscostumes.com">Thunder Thighs Costume Shop</a><br />16 Busy St<br />Toronto<br />M4M 1N8</p>
               </div>
-              <div className="info-card">
+              <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Tickets">🎫</div>
                 <h3>Tickets</h3>
                 <p>Regular: TBD <br />VIP: TBD<br />18+</p>
@@ -105,19 +81,19 @@ function App() {
                 Join us for a magical Valentine's Day celebration at our costume shop! Browse our special collection of romantic costumes, enjoy themed activities, and find the perfect outfit for your Valentine's celebration.
               </p>
               <div className="features">
-                <div className="feature">
+                <div className="feature" ref={addToRefs}>
                   <h3>💕 Romantic Costumes</h3>
                   <p>Explore the curated collection of costumes and romantic outfits</p>
                 </div>
-                <div className="feature">
+                <div className="feature" ref={addToRefs}>
                   <h3>🎭 Craft beers</h3>
                   <p>Enjoy a selection of craft beers to compliment your costume experience</p>
                 </div>
-                <div className="feature">
+                <div className="feature" ref={addToRefs}>
                   <h3>🍫 Sweet Treats</h3>
                   <p>Enjoy Valentine snacks and chocolates, and other refreshments</p>
                 </div>
-                <div className="feature">
+                <div className="feature" ref={addToRefs}>
                   <h3>📸 Photo Booth</h3>
                   <p>Capture memories with our themed Valentine's photo booth</p>
                 </div>
@@ -131,19 +107,13 @@ function App() {
             <h2 className="section-title">Contact Us</h2>
             <div className="contact-content">
               <div className="contact-info">
-                <div className="contact-item">
+                <div className="contact-item" ref={addToRefs}>
                   <h3>📧 Email</h3>
                   <p>
-                    <a href="mailto:info@heartsandcostumes.com">info@heartsandcasks.com</a>
+                    <a href="mailto:eventsbygyles@gmail.com">eventsbygyles@gmail.com</a>
                   </p>
                 </div>
-                <div className="contact-item">
-                  <h3>📱 Phone</h3>
-                  <p>
-                    <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                  </p>
-                </div>
-                <div className="contact-item">
+                <div className="contact-item" ref={addToRefs}>
                   <h3>🌐 Social Media</h3>
                   <p>
                     <a href="#" className="social-link" aria-label="Follow us on Facebook (link to be added)">Facebook</a> •
@@ -155,7 +125,7 @@ function App() {
               <div className="contact-form-section">
                 <h3>Have Questions?</h3>
                 <p>
-                  For inquiries about the event or general questions, please reach out via email or phone. We typically respond within 24 hours.
+                  For inquiries about the event or general questions, please reach out via email. We typically respond within 24 hours.
                 </p>
               </div>
             </div>
