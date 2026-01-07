@@ -67,7 +67,7 @@ function App() {
               <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Tickets">🎫</div>
                 <h3>Tickets</h3>
-                <p>Regular: TBD <br />VIP: TBD<br />18+</p>
+                <p>Regular: TBD <br />VIP: TBD<br />19+</p>
               </div>
             </div>
           </div>
