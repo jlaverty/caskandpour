@@ -39,7 +39,8 @@ function App() {
         </div>
         <div className="container">
           <h1 className="hero-title">Hearts & Casks</h1>
-          <p className="hero-subtitle">A Valentine's Day Costume Celebration</p>
+          <p className="hero-subtitle">Toronto's Premier Valentine's Day 2026 Event</p>
+          <p className="hero-description">February 14th, 2026 • Thunder Thighs Costume Shop • Downtown Toronto</p>
           <div className="hero-divider"></div>
         </div>
       </header>
@@ -47,27 +48,35 @@ function App() {
       <main>
         <section className="event-info">
           <div className="container">
-            <h2 className="section-title">Event Details</h2>
+            <h2 className="section-title">Valentine's Day 2026 Event Details - Toronto</h2>
             <div className="info-grid">
               <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Date">📅</div>
                 <h3>Date</h3>
                 <p>Saturday, February 14th, 2026</p>
+                <p className="detail-highlight">Valentine's Day Weekend</p>
               </div>
               <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Time">🕐</div>
                 <h3>Time</h3>
                 <p>7:00 PM - 12:00 AM</p>
+                <p className="detail-highlight">Evening Celebration</p>
               </div>
               <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Location">📍</div>
                 <h3>Location</h3>
-                <p><a href="https://thunderthighscostumes.com">Thunder Thighs Costume Shop</a><br />16 Busy St<br />Toronto<br />M4M 1N8</p>
+                <p><a href="https://thunderthighscostumes.com">Thunder Thighs Costume Shop</a><br />16 Busy St<br />Toronto, ON<br />M4M 1N8</p>
+                <p className="detail-highlight">Downtown Toronto</p>
               </div>
               <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Tickets">🎫</div>
                 <h3>Tickets</h3>
+<<<<<<< Updated upstream
                 <p>Regular: TBD <br />VIP: TBD<br />19+</p>
+=======
+                <p>Regular: $10 CAD<br />19+</p>
+                <p className="detail-highlight">Limited Availability</p>
+>>>>>>> Stashed changes
               </div>
             </div>
           </div>
@@ -75,27 +84,30 @@ function App() {
 
         <section className="about">
           <div className="container">
-            <h2 className="section-title">About the Event</h2>
+            <h2 className="section-title">About Toronto's Best Valentine's Day 2026 Event</h2>
             <div className="about-content">
               <p>
-                Join us for a magical Valentine's Day celebration at our costume shop! Browse our special collection of romantic costumes, enjoy themed activities, and find the perfect outfit for your Valentine's celebration.
+                Looking for unique Valentine's Day events in Toronto 2026? Join Hearts & Casks for an unforgettable Valentine's Day celebration on February 14th, 2026! This premier Toronto Valentine's Day event combines costume fun, craft beer tasting, and romantic ambiance at the iconic Thunder Thighs Costume Shop in downtown Toronto. Whether you're celebrating with your special someone or enjoying a fun night out with friends, this is THE Valentine's Day party Toronto has been waiting for!
+              </p>
+              <p>
+                Perfect for couples, singles, and groups looking for things to do on Valentine's Day 2026 in Toronto. Our event offers a unique alternative to traditional Valentine's Day celebrations with costume browsing, craft beverages, and entertainment.
               </p>
               <div className="features">
                 <div className="feature" ref={addToRefs}>
                   <h3>💕 Romantic Costumes</h3>
-                  <p>Explore the curated collection of costumes and romantic outfits</p>
+                  <p>Explore the curated collection of costumes and romantic outfits perfect for Valentine's Day celebrations</p>
                 </div>
                 <div className="feature" ref={addToRefs}>
-                  <h3>🎭 Craft beers</h3>
-                  <p>Enjoy a selection of craft beers to compliment your costume experience</p>
+                  <h3>🎭 Craft Beers</h3>
+                  <p>Enjoy a selection of premium craft beers to complement your costume browsing experience</p>
                 </div>
                 <div className="feature" ref={addToRefs}>
                   <h3>🍫 Sweet Treats</h3>
-                  <p>Enjoy Valentine snacks and chocolates, and other refreshments</p>
+                  <p>Indulge in Valentine's Day snacks, chocolates, and other delicious refreshments</p>
                 </div>
                 <div className="feature" ref={addToRefs}>
                   <h3>📸 Photo Booth</h3>
-                  <p>Capture memories with our themed Valentine's photo booth</p>
+                  <p>Capture memories with our Valentine's Day themed photo booth - perfect for couples and friends</p>
                 </div>
               </div>
             </div>
