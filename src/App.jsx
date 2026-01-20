@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "../styles.css";
+import logo from "./assets/caskandpour.png";
 
 function App() {
   const elementsRef = useRef([]);
@@ -37,6 +38,9 @@ function App() {
         <div className="floating-heart">
           <div className="heart"></div>
         </div>
+        <div className="floating-logo">
+          <img src={logo} alt="Cask and Pour" />
+        </div>
         <div className="container">
           <h1 className="hero-title">Hearts & Casks</h1>
           <p className="hero-subtitle">Toronto's Premier Valentine's Day 2026 Event</p>
@@ -71,12 +75,8 @@ function App() {
               <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Tickets">🎫</div>
                 <h3>Tickets</h3>
-<<<<<<< Updated upstream
-                <p>Regular: TBD <br />VIP: TBD<br />19+</p>
-=======
                 <p>Regular: $10 CAD<br />19+</p>
                 <p className="detail-highlight">Limited Availability</p>
->>>>>>> Stashed changes
               </div>
             </div>
           </div>

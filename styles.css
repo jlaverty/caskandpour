@@ -410,3 +410,16 @@ footer p {
 .contact-item {
     animation: fadeIn 0.6s ease-out;
 }
+
+/* Header Logo */
+.floating-logo {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.floating-logo img {
+    width: 140px;
+    height: auto;
+}
