@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://caskandpour.com/sitemap.xml
+Sitemap: https://www.caskandpour.ca/sitemap.xml
 
 # Google
 User-agent: Googlebot
