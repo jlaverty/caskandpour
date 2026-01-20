@@ -1,0 +1,20 @@
+# robots.txt for https://caskandpour.com/
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://caskandpour.com/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Speed up crawling
+Crawl-delay: 0
