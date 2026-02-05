@@ -128,9 +128,7 @@ function App() {
                 <div className="contact-item" ref={addToRefs}>
                   <h3>🌐 Social Media</h3>
                   <p>
-                    <a href="#" className="social-link" aria-label="Follow us on Facebook (link to be added)">Facebook</a> •
-                    <a href="#" className="social-link" aria-label="Follow us on Instagram (link to be added)">Instagram</a> •
-                    <a href="#" className="social-link" aria-label="Follow us on Twitter (link to be added)">Twitter</a>
+                    <a href="https://www.instagram.com/caskandpour" className="social-link" aria-label="Follow us on Instagram">Instagram</a> •
                   </p>
                 </div>
               </div>
