@@ -75,7 +75,7 @@ function App() {
               <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Tickets">🎫</div>
                 <h3>Tickets</h3>
-                <p>Regular: $10 CAD<br />19+</p>
+                <p>$10 CAD at the door.<br />19+ <br />Cash preferred.</p>
                 <p className="detail-highlight">Limited Availability</p>
               </div>
             </div>
@@ -87,7 +87,7 @@ function App() {
             <h2 className="section-title">About Toronto's Best Valentine's Day 2026 Event</h2>
             <div className="about-content">
               <p>
-                Looking for unique Valentine's Day events in Toronto 2026? Join Hearts & Casks for an unforgettable Valentine's Day celebration on February 14th, 2026! This premier Toronto Valentine's Day event combines costume fun, craft beer tasting, and romantic ambiance at the iconic Thunder Thighs Costume Shop in downtown Toronto. Whether you're celebrating with your special someone or enjoying a fun night out with friends, this is THE Valentine's Day party Toronto has been waiting for!
+                Looking for unique Valentine's Day events in Toronto 2026? Join Hearts & Casks for an unforgettable Valentine's Day celebration on February 14th, 2026! This premier Toronto Valentine's Day event combines costume fun, drinks, and romantic ambiance at the iconic Thunder Thighs Costume Shop in downtown Toronto. Whether you're celebrating with your special someone or enjoying a fun night out with friends, this is THE Valentine's Day party Toronto has been waiting for!
               </p>
               <p>
                 Perfect for couples, singles, and groups looking for things to do on Valentine's Day 2026 in Toronto. Our event offers a unique alternative to traditional Valentine's Day celebrations with costume browsing, craft beverages, and entertainment.
@@ -98,8 +98,8 @@ function App() {
                   <p>Explore the curated collection of costumes and romantic outfits perfect for Valentine's Day celebrations</p>
                 </div>
                 <div className="feature" ref={addToRefs}>
-                  <h3>🎭 Craft Beers</h3>
-                  <p>Enjoy a selection of premium craft beers to complement your costume browsing experience</p>
+                  <h3>🎭 Beverages</h3>
+                  <p>Enjoy a selection of beverages to complement your costume browsing experience</p>
                 </div>
                 <div className="feature" ref={addToRefs}>
                   <h3>🍫 Sweet Treats</h3>
