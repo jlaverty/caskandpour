@@ -1,9 +1,9 @@
-# robots.txt for https://caskandpour.com/
+# robots.txt for https://www.caskandpour.ca/
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://caskandpour.com/sitemap.xml
+Sitemap: https://www.caskandpour.ca/sitemap.xml
 
 # Google
 User-agent: Googlebot
