@@ -75,7 +75,7 @@ function App() {
               <div className="info-card" ref={addToRefs}>
                 <div className="icon" role="img" aria-label="Tickets">🎫</div>
                 <h3>Tickets</h3>
-                <p>$10 CAD at the door.<br />19+ <br />Cash preferred.</p>
+                <p>19+ <br />Pay what you can. <br />$10 suggested. <br />Cash preferred.</p>
                 <p className="detail-highlight">Limited Availability</p>
               </div>
             </div>
